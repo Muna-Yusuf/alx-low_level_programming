@@ -1,6 +1,9 @@
-#!/bin/bash
 #include<stdio.h>
-int main (0)
+/**
+ * main -to print somthing
+ * Return:zero 
+ */
+int main (void)
 {
 
  puts("Programming is like building a multilingual puzzle");
