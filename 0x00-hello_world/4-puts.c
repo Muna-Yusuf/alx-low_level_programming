@@ -1,5 +1,8 @@
 #include<stdio.h>
-/* main to print somthing,return zero if doen*/
+/**
+ * main -To print with puts function.
+ * Return:0 ( zero if doen)
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
