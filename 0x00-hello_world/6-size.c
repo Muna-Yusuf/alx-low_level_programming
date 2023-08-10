@@ -5,17 +5,16 @@
  */
 int main(void)
 {
-	char a;
-	int b;
+	char c;
+	int i;
+	long l;
+	double ll;
+	float f;
 
-	long char aa;
-	long int bb;
-	float c;
-
-	printf("Size of a char:", sizeof(a), "byte(s)\n");
-	printf("Size of an int:", sizeof(b), "byte(s)\n");
-	printf("Size of a char:", sizeof(bb), "byte(s)\n");
-	printf("Size of a char:", sizeof(aa), "byte(s)\n");
-	printf("Size of a float:", sizeof(c), "byte(s)\n");
+	printf("Size of char: %ld byte(s)\n", sizeof(c));
+	printf("Size of int: %ld bytes(s)\n", sizeof(i));
+	printf("Size of long int : %ld bytes(s)\n", sizeof(l));
+	printf("Size of long long : %ld bytes(s)\n", sizeof(ll));
+	printf("Size of float: %ld bytes(s)\n", sizeof(f));
 	return (0);
 }
