@@ -1,26 +1,16 @@
 #include <stdio.h>
 /**
- * main-enter point
+ * main-alphabet in loewrcase and uppercase
  * Return:0(if done)
  */
 int main(void)
 {
-	char c;
+	char i;
 
-	char d;
-
-	c = 'a';
-	d = 'A';
-	while
-		(c <= 'z') {
-			putchar(c);
-			c++;
-		}
-	while
-		(d <= 'z') {
-			putchar (d);
-			d++;
-		}
+	for (i = 'a' ; i <= 'z' ; i++)
+		putchar(i);
+	for (i = 'A' ; i <= 'Z' ; i++)
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
