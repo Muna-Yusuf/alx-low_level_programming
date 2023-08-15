@@ -1,9 +1,9 @@
-#include"main.h"
-#include<unistd.h>
+#include "main.h"
+
 /**
  * print_alphabet - function prints alphabet in lowercase and new line
- * Return:0 ( if doen)
  */
+
 void print_alphabet(void)
 {
 	char i;
@@ -13,10 +13,4 @@ void print_alphabet(void)
 		_putchar(i);
 	}
 	_putchar('\n');
-	return(0);
-}
-int main(void)
-{
-    print_alphabet();
-    return (0);
 }
