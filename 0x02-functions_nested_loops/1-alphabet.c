@@ -1,10 +1,10 @@
 #include"main.h"
 #include<unistd.h>
 /**
- * alphabet - function prints alphabet in lowercase and new line
+ * print_alphabet - function prints alphabet in lowercase and new line
  * Return:0 ( if doen)
  */
-int alphabet(void)
+void print_alphabet(void)
 {
 	char i;
 
@@ -13,5 +13,10 @@ int alphabet(void)
 		_putchar(i);
 	}
 	_putchar('\n');
-	return (0);
+	return(0);
+}
+int main(void)
+{
+    print_alphabet();
+    return (0);
 }
