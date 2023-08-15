@@ -1,14 +1,13 @@
 #include<stdio.h>
 /**
- * alphabet -check for lowercase
- * Return:0 ( zero if doen)
+ * _islower -check for lowercase
+ * @c: check if the char is lowercase
+ * Return:1 ( zero if doen), otherwais 0
  */
-
-int alphabet(void)
+int _islower(int c)
 {
-	int i;
 
-	if (i >= 'a' && i <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (1);
 	else
 		return (0);
