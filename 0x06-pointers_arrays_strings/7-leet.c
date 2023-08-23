@@ -13,7 +13,7 @@ char *leet(char *s)
 	char letters[] = {'A', 'E', 'O', 'T', 'L'};
 	int num[] = {4, 3, 0, 7, 1};
 
-	while(*s)
+	while (*s)
 	{
 		for (i = 0; i < sizeof(letters) / sizeof(char); i++)
 		{
