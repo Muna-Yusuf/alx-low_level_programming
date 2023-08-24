@@ -9,7 +9,6 @@
 
 char *cap_string(char *str)
 {
-	char *str2 = str;
 	int j = 0;
 
 	while (str[j])
@@ -33,5 +32,5 @@ char *cap_string(char *str)
 			str[j] -= 32;
 		j++;
 	}
-	return (str2);
+	return (str);
 }
