@@ -4,7 +4,7 @@
  * main - a program that multiplies two numbers.
  * @argc: int
  * @argv: list
- * Return: 0
+ * Return: 1
  */
 
 int main(int argc, char *argv[])
@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 		printf("%d\n", s);
 	}
 	else
-	printf("Error\n");
-	return (1);
-return (0);
+	{
+		printf("Error\n");
+		return (1);
+	}
+	return (0);
 }
