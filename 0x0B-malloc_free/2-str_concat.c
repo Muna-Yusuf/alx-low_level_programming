@@ -10,21 +10,17 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int x, y;
+	int x = 0, y = 0;
 	char *z;
 
 	if (s1 == 0)
 		s1 = "\0";
 	if (s2 == 0)
 		s2 = "\0";
-	for (x = 0; s1[x] != '\0'; x++)
-	{
+	while (s1[x] != '\0')
 		x++;
-	}
-	for (y = 0; s1[y] != '\0'; y++)
-	{
-		y++;
-	}
+	while (s2[y] != '\0')
+		y++;	
 	z = malloc((x + y) * sizeof(char) + 1);
 	if (z == 0)
 	{
