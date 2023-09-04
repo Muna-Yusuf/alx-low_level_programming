@@ -10,7 +10,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int x, y, i;
+	int x, y;
 	char *z;
 
 	if (s1 == 0)
@@ -30,13 +30,17 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (0);
 	}
-	for (i = 0; i <= x + y; i++)
+	x = y = 0;
+	while (s1[x] != '\0')
 	{
-		if (i < x)
-			z[i] = s1[i];
-		else
-			z[i] = s2[i - x];
+		z[x] = s1[x];
+		x++;
 	}
-	z[i] = '\0';
+	while (s2[y] != '\0')
+	{
+		z[x] = s2[y];
+		x++, y++;
+	}
+	z[x] = '\0';
 	return (z);
 }
