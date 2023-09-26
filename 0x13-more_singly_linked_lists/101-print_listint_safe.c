@@ -50,7 +50,7 @@ size_t print_listint_safe(const listint_t *head)
 			node1 = node1->next;
 			if (head == node1->a)
 			{
-				printf("-> [%p] %d\n",(void *)head, head->n);
+				printf("-> [%p] %d\n", (void *)head, head->n);
 				free_list_x(&tmp);
 				return (x);
 			}
