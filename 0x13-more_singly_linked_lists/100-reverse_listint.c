@@ -10,7 +10,7 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *tmp, *node;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return (NULL);
 	}
@@ -21,17 +21,17 @@ listint_t *reverse_listint(listint_t **head)
 	{
 		node = (*head)->next;
 		(*head)->next = tmp;
-		tmp = (*head);
+		tmp = *head;
 		if (node == NULL)
 		{
 			return (*head);
 		}
 		*head = node;
 	}
-	if (!*head)
+	if (*head == NULL)
 	{
 		*head = tmp;
 		return (*head);
 	}
-	return (NULL);
+	return (0);
 }
