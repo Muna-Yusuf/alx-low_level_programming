@@ -29,18 +29,18 @@ typedef struct listint_s
  */
 typedef struct list
 {
-	int *a;
+	void *a;
 	struct list *next;
 } list_t;
 
 /**
- * list - frees the linked list.
+ * free_list_x - frees the linked list.
  * @head: pointr.
  * Return: void.
  */
-void list(listint_t **head)
+void free_list_x(list_t **head)
 {
-	listint_t *tmp, *node;
+	list_t *tmp, *node;
 
 	if (head != NULL)
 	{
