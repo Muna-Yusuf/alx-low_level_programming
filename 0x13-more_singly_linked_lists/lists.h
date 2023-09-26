@@ -18,6 +18,41 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
+
+/**
+ * struct list - singly linked list
+ * @a: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ *
+ */
+typedef struct list
+{
+	int *a;
+	struct list *next;
+} list_t;
+
+/**
+ * list - frees the linked list.
+ * @head: pointr.
+ * Return: void.
+ */
+void list(listint_t **head)
+{
+	listint_t *tmp, *node;
+
+	if (head != NULL)
+	{
+		node = *head;
+		while ((tmp = node) != NULL)
+		{
+			node = node->next;
+			free(tmp);
+		}
+		*head = NULL;
+	}
+}
 size_t print_listint(const listint_t *h);
 int _putchar(char c);
 size_t listint_len(const listint_t *h);
