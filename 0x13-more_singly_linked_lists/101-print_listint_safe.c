@@ -1,6 +1,27 @@
 #include "lists.h"
 
 /**
+ * free_list_x - frees the linked list.
+ * @head: pointr.
+ * Return: void.
+ */
+void free_list_x(list_t **head)
+{
+	list_t *tmp, *node;
+
+	if (head != NULL)
+	{
+		node = *head;
+		while ((tmp = node) != NULL)
+		{
+			node = node->next;
+			free(tmp);
+		}
+		*head = NULL;
+	}
+}
+
+/**
  * print_listint_safe - function that prints a listint_t linked list.
  * @head: pointer.
  * Return: the number of nodes in the list.

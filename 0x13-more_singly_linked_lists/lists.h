@@ -33,26 +33,7 @@ typedef struct list
 	struct list *next;
 } list_t;
 
-/**
- * free_list_x - frees the linked list.
- * @head: pointr.
- * Return: void.
- */
-void free_list_x(list_t **head)
-{
-	list_t *tmp, *node;
-
-	if (head != NULL)
-	{
-		node = *head;
-		while ((tmp = node) != NULL)
-		{
-			node = node->next;
-			free(tmp);
-		}
-		*head = NULL;
-	}
-}
+void free_list_x(list_t **head);
 size_t print_listint(const listint_t *h);
 int _putchar(char c);
 size_t listint_len(const listint_t *h);
