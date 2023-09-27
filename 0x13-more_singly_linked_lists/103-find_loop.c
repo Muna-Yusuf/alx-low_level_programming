@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdbool.h>
 
 /**
  * find_listint_loop - a function that finds the loop in a linked list.
@@ -14,32 +15,29 @@ listint_t *find_listint_loop(listint_t *head)
 
 	tmp = head;
 	node = head;
-	while (head)
+	for (; head && tmp && tmp->next ;)
 	{
-		if (tmp && tmp->next)
+		head = head->next;
+		tmp = tmp->next->next;
+		if (head == tmp)
 		{
-			head = head->next;
-			tmp = tmp->next->next;
-			if (head == tmp)
+			head = node;
+			node = tmp;
+			while (true)
 			{
-				head = node;
-				node = tmp;
-				while (1)
+				tmp = node;
+				for (; tmp->next != head && tmp->next != node ;)
 				{
-					tmp = node;
-					while (tmp->next != head && tmp->next != node)
-					{
-						tmp = tmp->next;
-					}
-					if (tmp->next == head)
-					{
-						break;
-					}
-					head = head->next;
+					tmp = tmp->next;
 				}
-				return (tmp->next);
+				if (tmp->next == head)
+				{
+					break;
+				}
+				head = head->next;
 			}
+			return (tmp->next);
 		}
 	}
-	return (0);
+	return (NULL);
 }
