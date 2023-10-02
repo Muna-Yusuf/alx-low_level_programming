@@ -2,8 +2,8 @@
 
 /**
  * strl - len of string.
- * @s:
- * return: int
+ * @s: char
+ * Return: int
  */
 int strl(char *s)
 {
