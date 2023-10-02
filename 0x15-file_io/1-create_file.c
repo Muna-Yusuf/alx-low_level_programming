@@ -29,11 +29,11 @@ int create_file(const char *filename, char *text_content)
 	if (len)
 	{
 		output = write(file_open, text_content, len);
-		if (output == -1)
-		{
-			close(file_open);
-			return (-1);
-		}
+	}
+	if (output == -1)
+	{
+		close(file_open);
+		return (-1);
 	}
 	close(file_open);
 	return (1);
