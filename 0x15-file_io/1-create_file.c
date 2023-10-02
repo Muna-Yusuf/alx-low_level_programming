@@ -41,11 +41,6 @@ int create_file(const char *filename, char *text_content)
 	{
 		output = write(file_open, text_content, len);
 	}
-	if (output == -1)
-	{
-		close(file_open);
-		return (-1);
-	}
 	close(file_open);
-	return (1);
+	return (output == len ? 1 : -1);
 }
