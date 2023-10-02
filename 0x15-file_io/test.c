@@ -1,21 +1,6 @@
 #include "main.h"
 
 /**
- * strl - len of string.
- * @s:
- * return: int
- */
-int strl(char *s)
-{
-	int i = 0;
-
-	while (*s++)
-	{
-		i++;
-	}
-	return (i);
-}
-/**
  * create_file - a function that creates a file.
  * @filename: the file.
  * @text_content: a NULL terminated string to write to the file.
@@ -26,9 +11,9 @@ int strl(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	int file_open;
-	ssize_t output = 0, len = strl(text_content);
+	ssize_t output, len = 0;
 
-	if (!filename)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
@@ -36,6 +21,10 @@ int create_file(const char *filename, char *text_content)
 	if (file_open == -1)
 	{
 		return (-1);
+	}
+	while (*text_content++)
+	{
+		len++;
 	}
 	if (len)
 	{
@@ -48,4 +37,5 @@ int create_file(const char *filename, char *text_content)
 	}
 	close(file_open);
 	return (1);
+
 }
