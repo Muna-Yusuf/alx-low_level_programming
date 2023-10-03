@@ -268,7 +268,7 @@ void close_elf(int elf)
  * main - Displays the information contained.
  * @argc: int
  * @argv: char
- * Return: 0. 
+ * Return: 0.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
