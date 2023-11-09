@@ -3,7 +3,7 @@
 /**
  * get_dnodeint_at_index - function returns the nth node of the list.
  * @head: struct "pointer to current head"
- * @indx: int.
+ * @index: int.
  * Return: address of indx.
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
